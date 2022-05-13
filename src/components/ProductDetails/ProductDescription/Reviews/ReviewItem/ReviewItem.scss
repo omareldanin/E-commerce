@@ -1,0 +1,14 @@
+.ReviewItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+    .customerName{
+        margin: 10px 0;
+    }
+    .message{
+        color: #817f7f;
+    }
+}

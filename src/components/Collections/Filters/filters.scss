@@ -1,0 +1,13 @@
+.filters{
+    .clearAll{
+        width: 100%;
+        button{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:768px){
+    .filters{
+        display: none;
+    }
+}

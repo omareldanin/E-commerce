@@ -1,0 +1,26 @@
+.productImages{
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    .swiper{
+        position: unset !important;
+        .swiper-slide{
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .swiper-pagination{
+            bottom: -90px !important;
+        }
+        .swiper-pagination-bullet{
+            width: 60px;
+            height: 60px;
+            border-radius:50%  !important;
+            background-size: cover !important;
+            border: 2px solid var(--mainColor);
+        }
+    }
+}

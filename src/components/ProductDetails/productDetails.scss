@@ -1,0 +1,42 @@
+.product-header{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../../Images/login.jpg) fixed center center;
+    background-size: cover;
+    margin-top: 90px;
+    color: #fff;
+    margin-bottom: 70px;
+
+}
+.productDetails{
+    margin: 70px 0;
+    .container-fluid{
+        padding: 0 30px !important;
+    }
+    .product-info{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.product-description{
+    width: 100%;
+}
+@media(max-width:768px){
+    .filters{
+        display: none;
+    }
+}
+@media(max-width:1200px){
+    .productImages,.product-control{
+        width: 100% !important;
+    }
+    .product-control{
+        margin-top: 100px !important;
+    }
+}
+@media(max-width:500px){
+    .product-header{
+        margin-top: 0;
+    }
+}

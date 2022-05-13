@@ -1,0 +1,24 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+button,.link{
+    background-color:$secondColor ;
+    color: $mainColor;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    -o-border-radius: 28px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+button:hover,.link:hover{
+    background-color: $mainColor;
+    color: #fff;
+}
+

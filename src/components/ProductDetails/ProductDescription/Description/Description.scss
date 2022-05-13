@@ -1,0 +1,17 @@
+.description{
+    width: 100%;
+    border: 1px solid rgba(204, 204, 204, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    .paragraph{
+        margin-bottom: 25px;
+        h3{
+            color: var(--secondColor);
+        }
+        p{
+            font-size: 20px;
+            color: #817f7f;
+        }
+    }
+}

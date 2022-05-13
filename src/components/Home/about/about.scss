@@ -1,0 +1,48 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+.section1 {
+    margin-top: 50px; }
+    .section1 img {
+      max-width: 100%; }
+    .section1 .container .row {
+      margin-bottom: 60px; }
+      .section1 .container .row .product-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .section1 .container .row .product-info h4 {
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 30px; 
+        }
+        .section1 .container .row .product-info h4::after {
+          content: "";
+          display: inline-block;
+          height: 1px;
+          width: 50px;
+          background-color: #fc846b;
+          margin: 0 0 5px 15px; }
+        .section1 .container .row .product-info h2 {
+          color: #fc846b;
+          font-family: 'Playfair Display SC', serif; 
+          font-size: 40px;
+          font-weight: 600;
+        }
+        .section1 .container .row .product-info p {
+          font-family: 'Poppins', sans-serif;
+          color: $secondColor;
+          font-size: 17px;
+          margin: 30px 0; 
+        }
+.section1 {
+  a{
+    width: fit-content;
+}
+
+}

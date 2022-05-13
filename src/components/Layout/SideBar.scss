@@ -1,0 +1,88 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+.sideBar-over{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5554;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 5555;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    transition:all 300ms linear;
+    -webkit-transition:all 300ms linear;
+    -moz-transition:all 300ms linear;
+    -ms-transition:all 300ms linear;
+    -o-transition:all 300ms linear;
+    svg{
+        float: right;
+        margin: 10px;
+        cursor: pointer;
+        path{
+            transition: 300ms;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -ms-transition: 300ms;
+            -o-transition: 300ms;
+        }
+    }
+    svg:hover{
+        path{
+            fill:$mainColor
+        }
+    }
+    .items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .item{
+            text-decoration: none;
+            color:$secondColor;
+            font-size: 20px;
+            padding:10px;
+            font-weight: 500;
+            transition: color 0.3s ease-out;
+            -webkit-transition: color 0.3s ease-out;
+            -moz-transition: color 0.3s ease-out;
+            -ms-transition: color 0.3s ease-out;
+            -o-transition: color 0.3s ease-out;
+            font-family: 'Raleway', sans-serif;
+            border-bottom: 1px solid #ccc;
+        }
+        .item:hover{
+            color: $mainColor;
+            border-bottom:1px solid $mainColor;
+            
+        }
+    }
+    .active{
+        color: $mainColor !important;
+        border-bottom:1px solid $mainColor !important;
+
+    }
+}
+@media(max-width:768px){
+    .sideBar-over-open{
+        visibility:visible;
+        opacity: 1;
+    }
+    .sidebar-open{
+        left: 0 !important;
+    }
+}

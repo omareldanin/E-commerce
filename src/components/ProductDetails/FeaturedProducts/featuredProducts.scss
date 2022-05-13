@@ -1,0 +1,25 @@
+.featuredProducts{
+    color: var(--secondColor);
+    margin-top: 50px;
+    h3{
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.514);
+        margin-bottom: 20px;
+    }
+    .product{
+        display: flex;
+        padding: 0;
+        margin-bottom: 20px;
+        .productHead{
+            width: 40%;
+        }
+        .productInfo{
+            width: 60%;
+            text-align: start;
+            margin: 0 0 0 5px;
+        }
+        .options{
+            display: none;
+        }
+    }
+}

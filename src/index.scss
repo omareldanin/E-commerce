@@ -1,0 +1,41 @@
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;900&family=Raleway:wght@300;500;800&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // font-family: 'Playfair Display SC'
+
+}
+:root{
+  --mainColor:#fc846b;
+  --secondColor:#373737;
+}
+html{
+  font-family: 'Playfair Display SC', serif;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color:var(--secondColor);
+  input{
+    border: none;
+  }
+  input:focus{
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+    
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+body::selection{
+  background-color: #fc846b !important;
+}

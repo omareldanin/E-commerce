@@ -1,0 +1,49 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+.header{
+    width: 100%;
+    height: 100vh;
+    .swiper{
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide{
+        position: relative;
+    }
+    .swiper-button-prev,.swiper-button-next{
+        width: 45px;
+        height: 45px;
+        background-color: $secondColor;
+        color: $mainColor;
+        font-size: 15px;
+        transition: 300ms;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -ms-transition: 300ms;
+        -o-transition: 300ms;
+    }
+    .swiper-button-prev:hover,.swiper-button-next:hover{
+        background-color: $mainColor;
+        color: #fff;
+    }
+    .swiper-button-prev::after, .swiper-button-next::after{
+        font-size: 25px ;
+    }
+}
+@media(max-width:500px){
+    .header{
+        .swiper-button-prev,.swiper-button-next{
+            width: 34px;
+            height: 34px;
+            top:40%
+        }
+    .swiper-button-prev::after, .swiper-button-next::after{
+        font-size: 18px;
+    }
+    }
+}   

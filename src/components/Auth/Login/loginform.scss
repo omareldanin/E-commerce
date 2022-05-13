@@ -1,0 +1,123 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+.login-form{
+    margin: 50px auto;
+    text-align: end;
+    padding: 30px;
+    width: 500px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    p{
+        text-align: start;
+        font-size: 17px;
+        color: $secondColor;
+    }
+    .form-control{
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 30px ;
+        -webkit-border-radius: 30px ;
+        -moz-border-radius: 30px ;
+        -ms-border-radius: 30px ;
+        -o-border-radius: 30px ;
+    }
+    .form-control:focus{
+        border: 1px solid $mainColor;
+        box-shadow: 0px 0px 5px 0px $mainColor;
+    }
+    button{
+        width: 100%;
+    }
+    .create{
+        margin-top: 20px;
+        text-align: start;
+        p{
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+   .social-login{
+       display: flex;
+       justify-content: center;
+       margin: 10px 0;
+       div{
+           width:50%;  
+           margin:0 10px;
+           padding: 5px 0;
+           border-radius: 5px;
+           text-align: center;
+           -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+           -ms-border-radius: 5px;
+           -o-border-radius: 5px;
+           color:#fff;
+           cursor: pointer;
+           span{
+               margin-left: 10px;
+           }
+        }
+       .facebook{
+           background-color: #1877f2;
+           border: 1px solid #1877f2;
+           transition: 300ms;
+           -webkit-transition: 300ms;
+           -moz-transition: 300ms;
+           -ms-transition: 300ms;
+           -o-transition: 300ms;
+}
+       .facebook:hover{
+           background-color: #fff;
+           color: #1877f2;
+       }
+       .google{
+           background-color: #dd4b39;
+           border: 1px solid #dd4b39;
+           transition: 300ms;
+           -webkit-transition: 300ms;
+           -moz-transition: 300ms;
+           -ms-transition: 300ms;
+           -o-transition: 300ms;
+}
+       .google:hover{
+           background-color: #fff;
+           color: #dd4b39;
+       }
+   }
+   .or{
+       display: block;
+       font-size: 18px;
+       width: 100%;
+       text-align: center;
+       margin: 10px 0;
+       position: relative;
+   }
+   .or::after{
+       content: "";
+        position: absolute;
+        top: 15px; 
+        left:4%;
+        width: 40%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+   }
+   .or::before{
+    content: "";
+     position: absolute;
+     top: 15px; 
+     right: 4%;
+     width: 40%;
+     height: 1px;
+     background-color: rgba(0, 0, 0, 0.1);
+}
+
+}
+@media(max-width:550px){
+    .login-form{
+        width: 90%;
+        padding: 10px;
+    }
+}

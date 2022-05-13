@@ -1,0 +1,26 @@
+.reviews{
+    width: 100%;
+    border: 1px solid rgba(204, 204, 204, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    h2{
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+    }
+    .product-review{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+        svg{
+            font-size: 22px;
+        }
+        button{
+            font-size: 18px;
+            padding: 10px 25px;
+            height: fit-content;
+        }
+    }
+}

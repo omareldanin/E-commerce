@@ -1,0 +1,68 @@
+.category{
+    color: var(--secondColor);
+    h3{
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.514);
+    }
+    .mainLinksList{
+        list-style-type: none;
+        margin: 30px 0;
+        padding: 0;
+        font-size: 20px;
+        .mainLink{
+            margin: 10px 0;
+            transition: 300ms;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -ms-transition: 300ms;
+            -o-transition: 300ms;
+            width: 100%;
+            a{
+                color: var(--secondColor);
+                display: inline-block;
+                width: 60%;
+                transition: 300ms;
+                -webkit-transition: 300ms;
+                -moz-transition: 300ms;
+                -ms-transition: 300ms;
+                -o-transition: 300ms;
+                margin: 5px 0;
+            }
+            span{
+                font-weight: 800;
+                font-size: 22px;
+                float: right;
+                cursor: pointer;
+            }
+            .subLinks{
+                list-style-type:circle !important;
+                height: 0px;
+                font-size: 15px;
+                overflow: hidden;
+                transition: 300ms;
+                -webkit-transition: 300ms;
+                -moz-transition: 300ms;
+                -ms-transition: 300ms;
+                -o-transition: 300ms;
+                a:hover{
+                    color: var(--mainColor);
+                }
+            }
+            
+        }
+        .mainLink:hover{
+            .link1,span{
+               color: var(--mainColor);
+            }   
+        }
+        .active{
+            color: var(--mainColor) !important;
+            .link1{
+                color: var(--mainColor) !important;
+            }
+            .subLinks{
+                height: 30px !important;
+            }
+        }
+    }
+}

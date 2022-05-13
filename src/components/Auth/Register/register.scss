@@ -1,0 +1,13 @@
+.register-header{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../../../Images/login.jpg) fixed center center;
+    background-size: cover;
+    margin-top: 90px;
+    color: #fff;
+}
+@media(max-width:500px){
+    .register-header{
+        margin-top: 0;
+    }
+}

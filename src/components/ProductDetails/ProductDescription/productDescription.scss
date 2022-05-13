@@ -1,0 +1,17 @@
+.product-description{
+    margin-top: 50px;
+   .buttons{
+       button{
+           font-size: 20px;
+           padding: 10px 25px;
+           margin-right: 5px;
+           border-radius: 10px;
+           border-bottom-left-radius: 0;
+           border-bottom-right-radius: 0;
+       }
+       .active{
+           background-color: var(--mainColor);
+           color: #fff;
+       }
+   }
+}

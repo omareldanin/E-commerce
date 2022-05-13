@@ -1,0 +1,133 @@
+$mainColor:#fc846b;
+$secondColor:#373737;
+.testimonials{
+    width: 100%;
+    padding: 30px 0;
+    margin: 30px 0;
+    background-image: url(../../../Images/section-bgimage-3.webp);
+    background-size: cover;
+    .container{
+        height: 100%;
+        .swiper{
+            width: 100%;
+            height: 100%;
+            margin-top: 60px;
+            .swiper-slide{
+                margin-bottom: 40px; 
+                .col-md-5{
+                    min-width: 300px;
+                    min-height: 300px;
+                    padding:20px;
+                    position: relative;
+                    display: flex;
+                    justify-content:flex-end;
+                    align-items: flex-end;
+                }
+                .col-md-5::after{
+                    content: "";
+                    position: absolute;
+                    top: 50px;
+                    left: 50px;
+                    display: block;
+                    width: 230px;
+                    height: 230px;
+                    background-color: $mainColor;
+                    animation: rotating 25s infinite linear;
+                    border-radius: 20px;
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    -ms-border-radius: 20px;
+                    -o-border-radius: 20px;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    z-index: -1;
+                    opacity: 0.3;
+                    -webkit-animation: rotating 25s infinite linear;
+                }
+                @keyframes rotating {
+                    from{
+                        transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                    }
+                    to{
+                        transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                    }   
+                }
+                .image{
+                    width: 220px;
+                    height: 220px;
+                    margin-right: 40px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                }
+                h4{
+                    color:$secondColor;
+                    margin:35px 0 20px 0;
+                }
+                span{
+                    display: block;
+                    height: 1px;
+                    width: 60px;
+                    background-color: $mainColor;
+                    margin:15px 0 ;
+                }
+           
+            }
+            .swiper-pagination-bullet{
+                width: 10px;
+                height: 10px;
+                border-radius: 0% !important;
+                -webkit-border-radius: 0% !important;
+                -moz-border-radius: 0% !important;
+                -ms-border-radius: 0% !important;
+                -o-border-radius: 0% !important;
+                background-color: #fc846b;
+            }
+        }
+        .head{
+            text-align: center;
+            span{
+                display: block;
+                height: 1px;
+                width: 70px;
+                background-color: $mainColor;
+                margin:10px auto ;
+            }
+            p{
+                font-size: 25px;
+                color: $secondColor;
+                margin: 20px 0;
+            }
+            h1{
+                color: $mainColor;
+            }
+        }
+    }
+  
+}
+@media(max-width:450px){
+    .testimonials .container .swiper .swiper-slide .image{
+        width:150px;
+        height : 150px;
+    }
+}

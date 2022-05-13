@@ -1,0 +1,99 @@
+.products{
+    .product{
+        width: 50%;
+    }
+    .filterList{
+        text-align: end;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid rgba(204, 204, 204, 0.63);
+        box-shadow: 0px 0px 1px 1px rgba(204, 204, 204, 0.26);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        .dorpDawnOverlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: none;
+        }
+        .list{
+            .select{
+                display: inline-flex;
+                justify-content: space-between;
+                position: relative;
+                width: 200px;
+                margin: 0 10px;
+                padding: 2px 5px;
+                font-size: 18px;
+                text-align: center;
+                color: var(--mainColor);
+                cursor: pointer;
+                background-color: var(--secondColor); 
+                border-radius: 7px;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                -ms-border-radius: 7px;
+                -o-border-radius: 7px;
+                transition: 300ms;
+                -webkit-transition: 300ms;
+                -moz-transition: 300ms;
+                -ms-transition: 300ms;
+                -o-transition: 300ms;
+                svg{
+                    margin-top: 5px;
+                }
+                .option{
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fcd6cf;
+                    z-index: 555;
+                    display: none;
+                    flex-direction: column;
+                    text-align: start;
+                    span{
+                        color: var(--secondColor);
+                        padding:2px 5px;
+                        cursor: pointer;
+                    }
+                    span:hover{
+                        background-color: var(--mainColor);
+                        color: #fff;
+                    }
+                }
+                .openOption{
+                    display: flex;
+                }
+            }  
+            .openSelect{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            p{
+                margin: 0;
+                display: inline-block;
+                font-size: 18px;
+                color: var(--secondColor);
+            }
+        }
+    }
+}
+.show{
+    display: block !important;
+}
+@media(max-width:550px){
+    .products{
+        .product{
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+}
