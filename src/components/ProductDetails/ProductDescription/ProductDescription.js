@@ -10,7 +10,7 @@ const ProductDescription = () => {
     <>
       <div className="buttons">
         <Button
-          className={showDescription && "active"}
+          classes={showDescription && "active"}
           click={() => {
             setShowDescription(true);
             setShowReviews(false);
@@ -19,7 +19,7 @@ const ProductDescription = () => {
           Product Description
         </Button>
         <Button
-          className={showReviews && "active"}
+          classes={showReviews && "active"}
           click={() => {
             setShowDescription(false);
             setShowReviews(true);

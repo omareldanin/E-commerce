@@ -18,7 +18,7 @@ const Video = () => {
           <FontAwesomeIcon icon={faClose} size="2x" onClick={closeVideo} />
           <div className="overlay" onClick={closeVideo}></div>
           <div className="video">
-            <video autoPlay="true" controls>
+            <video autoPlay={true} controls>
               <source src={video} type="video/mp4"></source>
             </video>
           </div>

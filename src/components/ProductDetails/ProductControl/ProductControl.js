@@ -1,16 +1,27 @@
 import "./product-control.scss";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Button from "../../UI/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../../store/cartSlice";
 const ProductControl = (props) => {
+  const dispatch = useDispatch();
   const amount = useRef();
-  const [productInfo, setProductInfo] = useState({
-    name: props.desc.name,
-    price: props.desc.price,
-    quantity: 1,
-    color: "black",
-    size: "2.5",
-    material: "silicon",
-  });
+  const [productInfo, setProductInfo] = useState({});
+  useEffect(() => {
+    setProductInfo({
+      id: props.id,
+      name: props.desc.name,
+      image: props.desc.image1,
+      price: props.desc.price,
+      amount: 1,
+      totalPrice: props.desc.price,
+      color: "black",
+      size: "2.5",
+      material: "silicon",
+    });
+  }, [props]);
+  console.log(productInfo);
+  //==================================================
   const sizeChangeHandler = (e) => {
     let sizeOptions = Array.from(
       document.querySelectorAll(".product-control .size li")
@@ -22,6 +33,7 @@ const ProductControl = (props) => {
     }
     e.target.className = "active";
   };
+  //==================================================
   const materialChangeHandler = (e) => {
     let sizeOptions = Array.from(
       document.querySelectorAll(".product-control .material li")
@@ -33,6 +45,7 @@ const ProductControl = (props) => {
     }
     e.target.className = "active";
   };
+  //==================================================
   const colorChangeHandler = (e) => {
     let sizeOptions = Array.from(
       document.querySelectorAll(".product-control .colors ul img")
@@ -45,25 +58,39 @@ const ProductControl = (props) => {
     console.log(e);
     e.target.className = "active";
   };
+  //==================================================
   const amountInputPlur = (e) => {
     let value = parseInt(amount.current.value);
     if (value <= 0) {
       amount.current.value = "0";
     }
   };
+  //==================================================
   const reduceAmountHandler = () => {
     let value = parseInt(amount.current.value);
     if (value === 0) {
       return;
     }
-    value--;
+    --value;
     amount.current.value = value;
+    setProductInfo((pre) => ({
+      ...pre,
+      amount: value,
+      totalPrice: value * props.desc.price,
+    }));
   };
+  //==================================================
   const increaseAmountHandler = () => {
     let value = parseInt(amount.current.value);
-    value++;
+    ++value;
     amount.current.value = value;
+    setProductInfo((pre) => ({
+      ...pre,
+      amount: value,
+      totalPrice: value * props.desc.price,
+    }));
   };
+  //==================================================
   return (
     <div className="product-control">
       <div className="name">
@@ -96,8 +123,8 @@ const ProductControl = (props) => {
         <span>Color:</span>
         <div className="options">
           <ul>
-            {props.images.map((img) => (
-              <li onClick={colorChangeHandler}>
+            {props.images.map((img, index) => (
+              <li key={index} onClick={colorChangeHandler}>
                 <img src={img} alt="productImage" />
               </li>
             ))}
@@ -137,7 +164,7 @@ const ProductControl = (props) => {
           type="number"
           name="amount"
           min="0"
-          defaultValue="0"
+          defaultValue="1"
           ref={amount}
           onBlur={amountInputPlur}
         />
@@ -146,7 +173,15 @@ const ProductControl = (props) => {
         </p>
       </div>
       <div className="buttons">
-        <Button>Add To Cart</Button>
+        <Button
+          click={() => {
+            if (productInfo.amount !== 0) {
+              dispatch(cartActions.addItem(productInfo));
+            }
+          }}
+        >
+          Add To Cart
+        </Button>
         <Button>Buy Now</Button>
       </div>
     </div>

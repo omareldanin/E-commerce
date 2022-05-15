@@ -11,9 +11,12 @@ import {
   faBars,
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import uiActions from "../../store/uiSlice";
+import { cartActions } from "../../store/cartSlice";
 const MainNavbar = () => {
+  const dispatch = useDispatch();
+  const totalCardItems = useSelector((state) => state.cart.totalQuantity);
   const [classes, setClasses] = useState("");
   window.onscroll = () => {
     if (window.pageYOffset > 80) {
@@ -22,7 +25,6 @@ const MainNavbar = () => {
       setClasses("");
     }
   };
-  const dispatch = useDispatch();
   const openHandler = () => {
     dispatch(uiActions.actions.toggleSideBar());
   };
@@ -62,8 +64,13 @@ const MainNavbar = () => {
                 <FontAwesomeIcon icon={faUser} size="lg" />
               </NavLink>
             </div>
-            <div>
-              <span>0</span>
+            <div
+              className="shoppingBag"
+              onClick={() => {
+                dispatch(cartActions.toggleCard());
+              }}
+            >
+              <span>{totalCardItems}</span>
               <FontAwesomeIcon icon={faBagShopping} size="lg" />
             </div>
             <div className="menubar">

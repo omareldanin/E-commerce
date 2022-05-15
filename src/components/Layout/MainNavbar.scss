@@ -101,7 +101,7 @@ nav{
             display: flex;
             justify-content: flex-end;       
             align-items: center;   
-            div{
+            .shoppingBag{
                 position: relative;
                 span{
                     position: absolute;
@@ -118,8 +118,8 @@ nav{
                     -moz-border-radius: 50%;
                     -ms-border-radius: 50%;
                     -o-border-radius: 50%;
+                    cursor: pointer;
                }
-            
                svg{
                    cursor: pointer;
                    margin-left: 20px;
@@ -132,8 +132,11 @@ nav{
                    }
                    
                 }
-               
-             
+            }
+            .shoppingBag:hover{
+                svg{
+                    color: var(--mainColor);
+                }
             }
             .menubar{
                 display: none;

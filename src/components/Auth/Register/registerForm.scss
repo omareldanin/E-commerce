@@ -40,79 +40,79 @@ $secondColor:#373737;
             margin-bottom: 0;
         }
     }
-   .social-login{
-       display: flex;
-       justify-content: center;
-       margin: 10px 0;
-       div{
-           width:50%;  
-           margin:0 10px;
-           padding: 5px 0;
-           border-radius: 5px;
-           text-align: center;
-           -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-           -ms-border-radius: 5px;
-           -o-border-radius: 5px;
-           color:#fff;
-           cursor: pointer;
-           span{
-               margin-left: 10px;
-           }
-        }
-       .facebook{
-           background-color: #1877f2;
-           border: 1px solid #1877f2;
-           transition: 300ms;
-           -webkit-transition: 300ms;
-           -moz-transition: 300ms;
-           -ms-transition: 300ms;
-           -o-transition: 300ms;
-}
-       .facebook:hover{
-           background-color: #fff;
-           color: #1877f2;
-       }
-       .google{
-           background-color: #dd4b39;
-           border: 1px solid #dd4b39;
-           transition: 300ms;
-           -webkit-transition: 300ms;
-           -moz-transition: 300ms;
-           -ms-transition: 300ms;
-           -o-transition: 300ms;
-}
-       .google:hover{
-           background-color: #fff;
-           color: #dd4b39;
-       }
-   }
-   .or{
-       display: block;
-       font-size: 18px;
-       width: 100%;
-       text-align: center;
-       margin: 10px 0;
-       position: relative;
-   }
-   .or::after{
-       content: "";
-        position: absolute;
-        top: 15px; 
-        left:4%;
-        width: 40%;
-        height: 1px;
-        background-color: rgba(0, 0, 0, 0.1);
-   }
-   .or::before{
-    content: "";
-     position: absolute;
-     top: 15px; 
-     right: 4%;
-     width: 40%;
-     height: 1px;
-     background-color: rgba(0, 0, 0, 0.1);
-}
+//    .social-login{
+//        display: flex;
+//        justify-content: center;
+//        margin: 10px 0;
+//        div{
+//            width:50%;  
+//            margin:0 10px;
+//            padding: 5px 0;
+//            border-radius: 5px;
+//            text-align: center;
+//            -webkit-border-radius: 5px;
+//            -moz-border-radius: 5px;
+//            -ms-border-radius: 5px;
+//            -o-border-radius: 5px;
+//            color:#fff;
+//            cursor: pointer;
+//            span{
+//                margin-left: 10px;
+//            }
+//         }
+//        .facebook{
+//            background-color: #1877f2;
+//            border: 1px solid #1877f2;
+//            transition: 300ms;
+//            -webkit-transition: 300ms;
+//            -moz-transition: 300ms;
+//            -ms-transition: 300ms;
+//            -o-transition: 300ms;
+// }
+//        .facebook:hover{
+//            background-color: #fff;
+//            color: #1877f2;
+//        }
+//        .google{
+//            background-color: #dd4b39;
+//            border: 1px solid #dd4b39;
+//            transition: 300ms;
+//            -webkit-transition: 300ms;
+//            -moz-transition: 300ms;
+//            -ms-transition: 300ms;
+//            -o-transition: 300ms;
+// }
+//        .google:hover{
+//            background-color: #fff;
+//            color: #dd4b39;
+//        }
+//    }
+//    .or{
+//        display: block;
+//        font-size: 18px;
+//        width: 100%;
+//        text-align: center;
+//        margin: 10px 0;
+//        position: relative;
+//    }
+//    .or::after{
+//        content: "";
+//         position: absolute;
+//         top: 15px; 
+//         left:4%;
+//         width: 40%;
+//         height: 1px;
+//         background-color: rgba(0, 0, 0, 0.1);
+//    }
+//    .or::before{
+//     content: "";
+//      position: absolute;
+//      top: 15px; 
+//      right: 4%;
+//      width: 40%;
+//      height: 1px;
+//      background-color: rgba(0, 0, 0, 0.1);
+// }
 
 }
 @media(max-width:550px){

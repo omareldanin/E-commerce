@@ -44,6 +44,8 @@ const ProductDetails = () => {
               <div className="product-info">
                 <ProductImages images={[product.image1, product.image2]} />
                 <ProductControl
+                  id={param.id}
+                  name={product.name}
                   desc={product}
                   images={[product.image1, product.image2]}
                 />

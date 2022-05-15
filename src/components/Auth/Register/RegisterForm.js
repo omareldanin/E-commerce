@@ -1,8 +1,7 @@
 import "./registerForm.scss";
 import { Form } from "react-bootstrap";
 import Button from "../../UI/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import googleIcon from "../../../Images/Google.webp";
 import { NavLink } from "react-router-dom";
 const RegisterForm = () => {
   return (
@@ -25,22 +24,17 @@ const RegisterForm = () => {
           <Button type="submit">Sign up</Button>
         </Form>
       </div>
+      <span className="or">or</span>
+      <div className="social-login">
+        <div className="google">
+          <img src={googleIcon} alt="googleIcon" />
+          <span>Continue with Google</span>
+        </div>
+      </div>
       <div className="create">
         <p>Have an account ?</p>
         <NavLink to="/login">Log in now</NavLink>
       </div>
-      <span className="or">or</span>
-      <div className="social-login">
-        <div className="facebook">
-          <FontAwesomeIcon icon={faFacebookF} size="lg" />
-          <span>Facebook</span>
-        </div>
-        <div className="google">
-          <FontAwesomeIcon icon={faGoogle} size="lg" />
-          <span>Google</span>
-        </div>
-      </div>
-      <div></div>
     </div>
   );
 };

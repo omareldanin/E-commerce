@@ -22,8 +22,8 @@ const ProductImages = (props) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {props.images.map((img) => (
-          <SwiperSlide>
+        {props.images.map((img, index) => (
+          <SwiperSlide key={index}>
             <img src={img} alt="productImage" />
           </SwiperSlide>
         ))}

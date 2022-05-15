@@ -18,6 +18,7 @@ html{
 body {
   margin: 0;
   background-color: #ffffff;
+  overflow-x: hidden;
   color:var(--secondColor);
   input{
     border: none;
