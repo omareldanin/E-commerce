@@ -1,6 +1,7 @@
 $mainColor:#fc846b;
 $secondColor:#373737;
 .login-form{
+    position: relative;
     margin: 50px auto;
     text-align: end;
     padding: 30px;
@@ -11,6 +12,15 @@ $secondColor:#373737;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    .center{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
     p{
         text-align: start;
         font-size: 17px;

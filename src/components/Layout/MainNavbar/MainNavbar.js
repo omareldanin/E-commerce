@@ -2,9 +2,9 @@ import "./MainNavbar.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import logo from "../../Images/logo.png";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { cartActions } from "../../../store/cartSlice";
 import {
   faUser,
   faBagShopping,
@@ -12,11 +12,13 @@ import {
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
-import uiActions from "../../store/uiSlice";
-import { cartActions } from "../../store/cartSlice";
+import UserInfo from "./UserInfo/UserInfo";
+import uiActions from "../../../store/uiSlice";
+import logo from "../../../Images/logo.png";
 const MainNavbar = () => {
   const dispatch = useDispatch();
   const totalCardItems = useSelector((state) => state.cart.totalQuantity);
+  const isLoggedin = useSelector((state) => state.auth.isLoggedin);
   const [classes, setClasses] = useState("");
   window.onscroll = () => {
     if (window.pageYOffset > 80) {
@@ -59,11 +61,15 @@ const MainNavbar = () => {
             </div>
           </Col>
           <Col className="options">
-            <div className="login-Link">
-              <NavLink to="/login">
-                <FontAwesomeIcon icon={faUser} size="lg" />
-              </NavLink>
-            </div>
+            {!isLoggedin ? (
+              <div className="login-Link">
+                <NavLink to="/login">
+                  <FontAwesomeIcon icon={faUser} size="lg" />
+                </NavLink>
+              </div>
+            ) : (
+              <UserInfo />
+            )}
             <div
               className="shoppingBag"
               onClick={() => {

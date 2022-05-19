@@ -1,7 +1,7 @@
 import { Fragment } from "react/cjs/react.production.min";
-import MainNavbar from "./MainNavbar";
-import Footer from "./Footer";
-import SideBar from "./SideBar";
+import MainNavbar from "./MainNavbar/MainNavbar";
+import Footer from "./Footer/Footer";
+import SideBar from "./Sidebar/SideBar";
 import Cart from "../Cart/Cart";
 import "./Layout.scss";
 const Layout = (props) => {
