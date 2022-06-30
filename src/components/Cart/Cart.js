@@ -1,4 +1,5 @@
 import "./cart.scss";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { cartActions } from "../../store/cartSlice";
@@ -7,6 +8,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import CartItem from "./CartItem/CartItem";
 const Cart = () => {
   const dispatch = useDispatch();
+
   const showCart = useSelector((state) => state.cart.showCart);
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -14,6 +16,12 @@ const Cart = () => {
   const closeCart = () => {
     dispatch(cartActions.toggleCard());
   };
+  useEffect(() => {
+    const oldCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    if (oldCartItems) {
+      dispatch(cartActions.setCartItems(oldCartItems));
+    }
+  }, [dispatch]);
   return (
     <>
       <div

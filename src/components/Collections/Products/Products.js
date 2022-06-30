@@ -7,13 +7,16 @@ import "firebase/analytics";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { firebaseConfig } from "../../../helpers/enviroment/enviroment";
+import { DotSpinner } from "@uiball/loaders";
 const Products = () => {
+  const [isLoading, setIsloading] = useState(false);
   const [products, setProducts] = useState([]);
   const [orderMethod, setOrderMethod] = useState({
     value: "rate",
     method: "desc",
   });
   useEffect(() => {
+    setIsloading(true);
     firebase.initializeApp(firebaseConfig);
     const firestore = firebase.firestore();
     const data = firestore
@@ -23,6 +26,7 @@ const Products = () => {
         setProducts(
           snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
         );
+        setIsloading(false);
       });
   }, [orderMethod]);
   const toggleDropDown = (e) => {
@@ -70,17 +74,23 @@ const Products = () => {
           </div>
         </div>
       </div>
-      {products.map((product) => (
-        <ProductItem
-          key={product.id}
-          id={product.id}
-          image1={product.image1}
-          image2={product.image2}
-          name={product.name}
-          price={product.price}
-          rate={product.rate}
-        />
-      ))}
+      {isLoading ? (
+        <div className="products-loadingSpinner center">
+          <DotSpinner size={40} speed={0.9} color="#ff5936" />
+        </div>
+      ) : (
+        products.map((product) => (
+          <ProductItem
+            key={product.id}
+            id={product.id}
+            image1={product.image1}
+            image2={product.image2}
+            name={product.name}
+            price={product.price}
+            rate={product.rate}
+          />
+        ))
+      )}
     </div>
   );
 };

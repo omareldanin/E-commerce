@@ -7,15 +7,18 @@ import ProductDescription from "./ProductDescription/ProductDescription";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { firebaseConfig } from "../../helpers/enviroment/enviroment";
+import { DotSpinner } from "@uiball/loaders";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/analytics";
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
+  const [isLoading, setIsloading] = useState(false);
   const param = useParams();
   const title = document.querySelector("title");
   title.innerText = `${product.name} - Boom Theme`;
   useEffect(() => {
+    setIsloading(true);
     firebase.initializeApp(firebaseConfig);
     const firestore = firebase.firestore();
     const data = firestore
@@ -24,6 +27,7 @@ const ProductDetails = () => {
       .get()
       .then((snapshot) => {
         setProduct(snapshot.data());
+        setIsloading(false);
       })
       .catch((e) => console.log(e));
   }, [param]);
@@ -34,6 +38,11 @@ const ProductDetails = () => {
         <p>All / {product.name}</p>
       </div>
       <div className="productDetails">
+        {isLoading ? (
+          <div className="productDetails-loading">
+            <DotSpinner size={40} speed={0.9} color="#ff5936" />
+          </div>
+        ) : null}
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-4 col-lg-3 filters">

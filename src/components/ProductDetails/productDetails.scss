@@ -10,6 +10,7 @@
 }
 .productDetails{
     margin: 70px 0;
+    position: relative;
     .container-fluid{
         padding: 0 30px !important;
     }
@@ -17,6 +18,18 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+    }
+    .productDetails-loading{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 11;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
     }
 }
 .product-description{

@@ -20,7 +20,6 @@ const ProductControl = (props) => {
       material: "silicon",
     });
   }, [props]);
-  console.log(productInfo);
   //==================================================
   const sizeChangeHandler = (e) => {
     let sizeOptions = Array.from(
